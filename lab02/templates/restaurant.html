@@ -9,13 +9,14 @@
 </head>
 <body>
     {% include 'includes/header.html' %}
-
     <main>
-        <p>Search location: {{location}}</p>
-        <p>Search term: {{search_term or 'None Specified'}}</p>
-        <p>Data: {{ restaurant }}</p>
-        <h2>Top Restaurant:</h2> 
-        <p>Name: {{ restaurant.get('name') }}</p>
+        <section>
+            <h2>Top Restaurant: {{ restaurant.get('name') }}</h2> 
+            <img src=" {{ restaurant.get('image_url') }}"/>
+            <p class="caption">You searched in {{location}} for {{search_term or 'None Specified'}}.</p>
+            <p>The restaurant has <b>{{ restaurant.get('rating')}} stars</b> and <b>{{ restaurant.get('review_count')}} reviews</b>.</p>
+            <p>You can find the restaurant at <b>{{ restaurant.get('display_address')}}</b>.</p>
+        </section>
     </main>
 </body>
 </html>
