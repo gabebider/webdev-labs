@@ -1,0 +1,5 @@
+- SQLAlchemy makes database management a lot easier. It does some of the work that SQL does not do for you and can combine tables automatically. It has a good infrastructure to work with along with Python
+
+- a model issues SQL queries under the hood of the program
+
+- a view is a subset of a larger table that can be queried for information
